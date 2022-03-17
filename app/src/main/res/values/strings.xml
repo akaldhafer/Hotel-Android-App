@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Hotel Stars</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="register">SIGN UP</string>
+    <string name="name">Name</string>
+    <string name="save">Save</string>
+    <string name="enterdetails">Enter note details</string>
+    <string name="newaccount">Create new account!</string>
+    <string name="haveccount">Already have account!</string>
+    <string name="verifyEmail">Please check your email and click on the sent link to verify your account !</string>
+    <string name="my_profile">My Profile</string>
+    <string name="vname">Name:</string>
+    <string name="not_found">Not found !</string>
+    <string name="vemail">Email:</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="let_s_write">Let\'s write,</string>
+    <string name="just_get_your_luggage_ready_your_fantastic_room_is_ready">Just get your luggage ready, your fantastic room is ready !</string>
+    <string name="let_s_find_your_room">Let\'s Find your room !</string>
+    <string name="best_offers">Best Offers</string>
+    <string name="view_all">View All</string>
+    <string name="lets_check_your_profile">Lets check your profile</string>
+    <string name="logout">logout</string>
+    <string name="master_room">Master Room</string>
+    <string name="all_service_you_need">All service you need !</string>
+    <string name="room_service">Room Service</string>
+    <string name="booking_history">Booking History</string>
+    <string name="current_booking">Current Booking</string>
+    <string name="requested_booking">Requested Booking</string>
+    <string name="lets_do_some_management">Lets do some management</string>
+    <string name="view_customers">View Customers</string>
+    <string name="add_room">Add Room</string>
+    <string name="view_rooms">View Rooms</string>
+</resources>
