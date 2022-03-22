@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.hotelstars.R;
 import com.example.hotelstars.auth.LoginPage;
@@ -25,21 +26,30 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
             // Name, email address, and profile photo Url
+
             String email = user.getEmail();
             // Check if user's email is verified
             boolean emailVerified = user.isEmailVerified();
             Intent intent;
-            if(emailVerified){
-                //call homepage ui
-                intent = new Intent(MainActivity.this, HomePageActivity.class);
+            if(email.equals("admin@gmail.com")){
+                Toast.makeText(MainActivity.this, "Welcome Back", Toast.LENGTH_LONG).show();
+                intent = new Intent(MainActivity.this, AdminPanel.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
             }
-            else{
-                //call verify email ui
-                intent = new Intent(MainActivity.this, VerifyEmail.class);
+            else {
+                if (emailVerified) {
+                    //call homepage ui
+                    intent = new Intent(MainActivity.this, HomePageActivity.class);
+                } else {
+                    //call verify email ui
+                    intent = new Intent(MainActivity.this, VerifyEmail.class);
+                }
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
             }
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-            finish();
         }
         else{
             setContentView(R.layout.activity_main);

@@ -1,16 +1,16 @@
 package com.example.hotelstars.roomapi;
 
 public class RoomModel {
-    private String id, title, description, isAvailable, location,token;
+    private String id, title, description, isAvailable, location, imageUrl;
     private int price;
 
-    public RoomModel(String id, String title, String description, String isAvailable, String location, String token, int price) {
+    public RoomModel(String id, String title, String description, String isAvailable, String location, String imageUrl, int price) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.isAvailable = isAvailable;
         this.location = location;
-        this.token = token;
+        this.imageUrl = imageUrl;
         this.price = price;
     }
 
@@ -54,12 +54,12 @@ public class RoomModel {
         this.location = location;
     }
 
-    public String getToken() {
-        return token;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setToken(String token) {
-        this.token = token;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public int getPrice() {

@@ -20,9 +20,9 @@ public class RoomUploadData implements RoomDataPresenter, RoomViewMessage {
 
     //to upload to the firebase
     @Override
-    public void onSuccessUpdate(Activity activity, String id, String title, String description, String isAvailable, String location, String token, int price) {
+    public void onSuccessUpdate(Activity activity, String id, String title, String description, String isAvailable, String location, String imageUrl, int price) {
 
-        RoomModel roomModel = new RoomModel( id,  title,  description,  isAvailable,  location,  token,  price);
+        RoomModel roomModel = new RoomModel( id,  title,  description,  isAvailable,  location,  imageUrl,  price);
         FirebaseFirestore.getInstance().collection("RoomData").document(id)
                 .set(roomModel, SetOptions.merge())
                 .addOnCompleteListener(new OnCompleteListener<Void>() {

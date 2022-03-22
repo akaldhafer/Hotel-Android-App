@@ -71,6 +71,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:layout_marginBottom="50dp"
             android:src="@mipmap/ic_launcher_foreground" />
 
         <LinearLayout
@@ -91,11 +92,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
+                    android:background="@drawable/grey_circular_border"
                     android:drawableStart="@drawable/fire"
                     android:drawableTint="@color/blue"
-                    android:padding="2dp"
-                    android:background="@drawable/grey_circular_border"
+                    android:padding="10dp"
                     android:text="@string/best_offers"
+                    android:textStyle="bold"
                     android:textColor="@color/blue"
                     android:textSize="16sp" />
 
@@ -105,25 +107,27 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:background="@drawable/grey_circular_border"
-                    android:padding="2dp"
                     android:onClick="onViewAllItems"
+                    android:padding="10dp"
                     android:text="@string/view_all"
                     android:textColor="@color/blue"
+                    android:textStyle="bold"
                     android:textSize="16sp" />
             </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="250dp">
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:orientation="vertical"
+                >
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/ListView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:orientation="horizontal"
-                    app:layout_constraintVertical_bias="0.102"
-                    tools:layout_editor_absoluteX="19dp" />
+                    android:layout_margin="1dp"
+                    />
 
             </LinearLayout>
 

@@ -33,4 +33,17 @@
     <string name="view_customers">View Customers</string>
     <string name="add_room">Add Room</string>
     <string name="view_rooms">View Rooms</string>
+    <string name="add">Add</string>
+    <string name="upload_room_photo">Upload Room Photo</string>
+    <string name="adding_new_room">Adding new room</string>
+    <string name="let_s_fill_up_the_needed_details">Let\'s fill up the needed Details</string>
+    <string name="room_title">Room Title</string>
+    <string name="room_description">Room Description</string>
+    <string name="room_price">Room Price</string>
+    <string name="room_location">Room Location</string>
+    <string name="page_title">Page Title</string>
+    <string name="description">Description</string>
+    <string name="location">Location</string>
+    <string name="price">Price</string>
+    <string name="title">Title</string>
 </resources>

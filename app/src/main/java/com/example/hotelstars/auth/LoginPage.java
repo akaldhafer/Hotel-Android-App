@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.hotelstars.R;
+import com.example.hotelstars.activity.AdminPanel;
 import com.example.hotelstars.activity.HomePageActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -68,18 +69,30 @@ public class LoginPage extends AppCompatActivity {
                     public void onSuccess(AuthResult authResult) {
                         FirebaseAuth auth = FirebaseAuth.getInstance();
                         boolean isVerified = Objects.requireNonNull(auth.getCurrentUser()).isEmailVerified();
-                        if(isVerified){
+
+                        String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+                        if(email.equals("admin@gmail.com")){
                             Toast.makeText(LoginPage.this, "Welcome Back", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(LoginPage.this, HomePageActivity.class);
+                            Intent intent = new Intent(LoginPage.this, AdminPanel.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(intent);
-                        }else{
-                            Toast.makeText(LoginPage.this, "Please verify your email first", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(LoginPage.this, VerifyEmail.class);
-                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(intent);
+                            finish();
                         }
-                        finish();
+                        else{
+                            if(isVerified){
+                                Toast.makeText(LoginPage.this, "Welcome Back", Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(LoginPage.this, HomePageActivity.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent);
+                            }else{
+                                Toast.makeText(LoginPage.this, "Please verify your email first", Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(LoginPage.this, VerifyEmail.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent);
+                            }
+                            finish();
+                        }
+
 
                     }
                 }).addOnFailureListener(new OnFailureListener() {

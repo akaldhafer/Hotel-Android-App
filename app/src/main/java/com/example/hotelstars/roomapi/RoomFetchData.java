@@ -39,11 +39,11 @@ public class RoomFetchData implements RoomFetchDataPresenter {
                         String description = task.getResult().getDocuments().get(i).getString("description");
                         String isAvailable = task.getResult().getDocuments().get(i).getString("isAvailable");
                         String location = task.getResult().getDocuments().get(i).getString("location");
-                        String token = task.getResult().getDocuments().get(i).getString("token");
+                        String imageUrl = task.getResult().getDocuments().get(i).getString("imageUrl");
                         int price =  Integer.parseInt(task.getResult().getDocuments().get(i).get("price").toString());
 
                         //save them in on object
-                        RoomModel roomModel = new RoomModel(id,  title,  description,  isAvailable,  location,  token,  price);
+                        RoomModel roomModel = new RoomModel(id,  title,  description,  isAvailable,  location,  imageUrl,  price);
 
                         //send object to the activity
                         roomViewFetchMessage.onUpdateSuccess(roomModel);

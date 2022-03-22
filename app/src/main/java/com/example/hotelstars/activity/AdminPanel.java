@@ -50,14 +50,14 @@ public class AdminPanel extends AppCompatActivity {
     }
 
     public void add_roomButton(View view) {
-        Intent intent = new Intent(AdminPanel.this, AdminPanel.class);
+        Intent intent = new Intent(AdminPanel.this, AddRoomActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         finish();
     }
 
     public void view_roomsButton(View view) {
-        Intent intent = new Intent(AdminPanel.this, AdminPanel.class);
+        Intent intent = new Intent(AdminPanel.this, AdminManageRoom.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         finish();
@@ -65,7 +65,7 @@ public class AdminPanel extends AppCompatActivity {
 
     public void onLogoutClick(View view) {
         FirebaseAuth.getInstance().signOut();
-        Intent intent = new Intent(AdminPanel.this, AdminPanel.class);
+        Intent intent = new Intent(AdminPanel.this, LoginPage.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         finish();

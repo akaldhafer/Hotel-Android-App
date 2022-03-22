@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.AddRoomActivity"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/txtEventTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/adding_new_room"
+        android:textColor="@color/blue"
+        android:textAlignment="textStart"
+        android:textStyle="bold"
+        android:textSize="25sp" />
+    <TextView
+        android:id="@+id/txtEventDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/black"
+        android:text="@string/let_s_fill_up_the_needed_details"
+        android:textAlignment="textStart"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/edTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/room_title"
+        android:textColorHint="@color/black"
+        android:inputType="text"
+        android:padding="15dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+    <EditText
+        android:id="@+id/edDesc"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/room_description"
+        android:textColorHint="@color/black"
+        android:inputType="text"
+        android:padding="15dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+    <EditText
+        android:id="@+id/edLocation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/room_location"
+        android:textColorHint="@color/black"
+        android:inputType="text"
+        android:padding="15dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+    <EditText
+        android:id="@+id/edPrice"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/room_price"
+        android:textColorHint="@color/black"
+        android:inputType="number"
+        android:padding="15dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="162dp"
+            android:layout_height="65dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="184dp"
+            android:layout_marginTop="49dp"
+            android:layout_marginEnd="25dp"
+            android:text="@string/upload_room_photo"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/pickImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/add">
+
+        </ImageView>
+
+
+        <Button
+            android:id="@+id/btnCreateEvent"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/blue"
+            android:onClick="onAddClick"
+            android:text="@string/add"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

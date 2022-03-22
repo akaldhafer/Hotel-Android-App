@@ -24,6 +24,10 @@ public class UserProfile extends AppCompatActivity {
 
 
     public void onMenuClick(View view) {
+        Intent intent = new Intent(UserProfile.this, UserMenu.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        finish();
     }
 
     public void onClickUpdateButton(View view) {
