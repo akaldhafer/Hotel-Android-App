@@ -46,4 +46,7 @@
     <string name="location">Location</string>
     <string name="price">Price</string>
     <string name="title">Title</string>
+    <string name="similar">Similar</string>
+    <string name="lets_book_your_room">Lets book your room</string>
+    <string name="book">Book</string>
 </resources>

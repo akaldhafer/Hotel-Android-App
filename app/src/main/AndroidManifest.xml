@@ -20,6 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HotelStars">
         <activity
+            android:name=".activity.RoomPageActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.AddRoomActivity"
             android:exported="false" />
         <activity
@@ -34,7 +37,6 @@
         <activity
             android:name=".activity.HomePageActivity"
             android:exported="false" />
-
         <activity
             android:name=".activity.AdminManageRoom"
             android:exported="false" />

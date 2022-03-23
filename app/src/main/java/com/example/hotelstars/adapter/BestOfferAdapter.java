@@ -2,6 +2,7 @@ package com.example.hotelstars.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,8 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hotelstars.R;
+import com.example.hotelstars.activity.RoomPageActivity;
+import com.example.hotelstars.activity.UserProfile;
 import com.example.hotelstars.roomapi.RoomModel;
 import com.squareup.picasso.Picasso;
 
@@ -47,7 +50,7 @@ public class BestOfferAdapter  extends RecyclerView.Adapter<BestOfferAdapter.Vie
         price = arrayList.get(holder.getAdapterPosition()).getPrice();
 
         holder.edTitle.setText(title);
-        holder.edPrice.setText(String.valueOf(price));
+        holder.edPrice.setText(String.valueOf(price)+" RM");
         //set the image
         Picasso.with(this.context).load(imageUrl).fit().into(holder.imageView);
         String id= arrayList.get(holder.getAdapterPosition()).getId();
@@ -57,6 +60,14 @@ public class BestOfferAdapter  extends RecyclerView.Adapter<BestOfferAdapter.Vie
             public void onClick(View view) {
                 //todo open product page
                 System.out.println("you clicked the view !"+id);
+                Intent intent = new Intent(view.getContext(), RoomPageActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra("id", id);
+                intent.putExtra("title", title);
+                intent.putExtra("description", description);
+                intent.putExtra("price", price);
+                intent.putExtra("imageUrl",imageUrl);
+                view.getContext().startActivity(intent);
             }
         });
 

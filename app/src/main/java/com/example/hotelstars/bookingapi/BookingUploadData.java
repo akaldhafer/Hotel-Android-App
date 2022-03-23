@@ -20,11 +20,11 @@ public class BookingUploadData implements BookingDataPresenter, BookingViewMessa
 
     //to upload to the firebase
     @Override
-    public void onSuccessUpdate(Activity activity, String id, String customerEmail, String customerName, String roomID,
+    public void onSuccessUpdate(Activity activity, String id, String customerEmail, String roomID,
                                 String roomTitle, String startDate, String endDate, String status,
                                 int bookingDays, int price, int totalPayment) {
 
-        BookingModel bookingModel = new BookingModel( id,  customerEmail,  customerName,  roomID,
+        BookingModel bookingModel = new BookingModel( id,  customerEmail,  roomID,
                  roomTitle,  startDate,  endDate,  status, bookingDays,  price,  totalPayment);
 
         FirebaseFirestore.getInstance().collection("BookingData").document(id)

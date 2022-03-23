@@ -71,7 +71,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="60dp"
             android:src="@mipmap/ic_launcher_foreground" />
 
         <LinearLayout
@@ -80,7 +80,7 @@
             android:background="@drawable/grey_circular_border"
             android:backgroundTint="@color/blue"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="6dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"

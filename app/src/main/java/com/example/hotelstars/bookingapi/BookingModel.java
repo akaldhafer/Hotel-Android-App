@@ -1,15 +1,14 @@
 package com.example.hotelstars.bookingapi;
 
 public class BookingModel {
-    private String id, CustomerEmail, CustomerName,roomID, roomTitle, startDate, endDate,status;
+    private String id, CustomerEmail,roomID, roomTitle, startDate, endDate,status;
     private int bookingDays, price, totalPayment;
 
-    public BookingModel(String id, String customerEmail, String customerName, String roomID,
+    public BookingModel(String id, String customerEmail, String roomID,
                         String roomTitle, String startDate, String endDate, String status,
                         int bookingDays, int price, int totalPayment) {
         this.id = id;
         CustomerEmail = customerEmail;
-        CustomerName = customerName;
         this.roomID = roomID;
         this.roomTitle = roomTitle;
         this.startDate = startDate;
@@ -42,14 +41,6 @@ public class BookingModel {
 
     public void setCustomerEmail(String customerEmail) {
         CustomerEmail = customerEmail;
-    }
-
-    public String getCustomerName() {
-        return CustomerName;
-    }
-
-    public void setCustomerName(String customerName) {
-        CustomerName = customerName;
     }
 
     public String getRoomID() {

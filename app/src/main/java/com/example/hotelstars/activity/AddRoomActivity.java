@@ -141,8 +141,8 @@ public class AddRoomActivity extends AppCompatActivity implements RoomViewMessag
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         String id = timestamp.toString().trim();
 
-        if(!TextUtils.isEmpty(title)
-                && !TextUtils.isEmpty(Description) && !TextUtils.isEmpty(imageuri)){
+        if(!TextUtils.isEmpty(title) && !TextUtils.isEmpty(Description) && !TextUtils.isEmpty(imageuri)){
+
             roomUploadData.onSuccessUpdate(this,id,title,Description,isAvailable,location,imageuri,price);
 
         }else{
