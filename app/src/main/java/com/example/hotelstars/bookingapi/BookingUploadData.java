@@ -21,11 +21,11 @@ public class BookingUploadData implements BookingDataPresenter, BookingViewMessa
     //to upload to the firebase
     @Override
     public void onSuccessUpdate(Activity activity, String id, String customerEmail, String roomID,
-                                String roomTitle, String startDate, String endDate, String status,
+                                String roomTitle, String startDate, String endDate, String status, String imageUrl,
                                 int bookingDays, int price, int totalPayment) {
 
         BookingModel bookingModel = new BookingModel( id,  customerEmail,  roomID,
-                 roomTitle,  startDate,  endDate,  status, bookingDays,  price,  totalPayment);
+                 roomTitle,  startDate,  endDate,  status, imageUrl,bookingDays,  price,  totalPayment);
 
         FirebaseFirestore.getInstance().collection("BookingData").document(id)
                 .set(bookingModel, SetOptions.merge())
@@ -33,7 +33,7 @@ public class BookingUploadData implements BookingDataPresenter, BookingViewMessa
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
-                            bookingViewMessage.onUpdateSuccess("Booked Successfully");
+                            bookingViewMessage.onUpdateSuccess("Booked Successfully, check your booking request for update");
                         }
                     }
                 }).addOnFailureListener(new OnFailureListener() {

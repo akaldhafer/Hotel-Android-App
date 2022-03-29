@@ -20,6 +20,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HotelStars">
         <activity
+            android:name=".activity.BookingHistory"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CurrentBooking"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ViewAllRoom"
+            android:exported="false" />
+        <activity
+            android:name=".activity.RequestedBooking"
+            android:exported="false" />
+        <activity
             android:name=".activity.RoomPageActivity"
             android:exported="false" />
         <activity

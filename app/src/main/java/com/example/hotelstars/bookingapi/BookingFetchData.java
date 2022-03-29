@@ -38,13 +38,16 @@ public class BookingFetchData implements BookingFetchDataPresenter {
                         String startDate = task.getResult().getDocuments().get(i).getString("startDate");
                         String endDate = task.getResult().getDocuments().get(i).getString("endDate");
                         String status = task.getResult().getDocuments().get(i).getString("status");
+                        String imageUrl = task.getResult().getDocuments().get(i).getString("imageUrl");
+
                         int bookingDays =  Integer.parseInt(task.getResult().getDocuments().get(i).get("bookingDays").toString());
                         int price =  Integer.parseInt(task.getResult().getDocuments().get(i).get("price").toString());
 
                         int totalPayment =  Integer.parseInt(task.getResult().getDocuments().get(i).get("totalPayment").toString());
 
                         //save them in on object
-                        BookingModel bookingModel = new BookingModel(id,  customerEmail,  roomID, roomTitle,  startDate,  endDate,  status, bookingDays,  price,  totalPayment);
+                        BookingModel bookingModel = new BookingModel(id,  customerEmail,  roomID, roomTitle,
+                                startDate,  endDate,  status,imageUrl, bookingDays,  price,  totalPayment);
 
                         //send object to the activity
                         viewFetchMessage.onUpdateSuccess(bookingModel);

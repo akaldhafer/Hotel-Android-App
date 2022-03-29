@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="200dp"
+    android:layout_width="180dp"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="3dp"
@@ -19,8 +19,10 @@
         <ImageView
             android:id="@+id/roomImage"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:src="@drawable/room" />
+            android:layout_height="150dp"
+            android:background="@drawable/room"
+            android:backgroundTint="@color/white"
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
