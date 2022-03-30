@@ -82,53 +82,13 @@
 
             <ImageView
                 android:id="@+id/setImage"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="50dp"
+                android:layout_marginBottom="70dp"
                 android:background="@drawable/person"
                 android:backgroundTint="@color/white" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:weightSum="100">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="25"
-                        android:lines="1"
-                        android:padding="10dp"
-                        android:text="@string/name"
-                        android:textColor="@color/white"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/profile_Name"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="70"
-                        android:padding="10dp"
-                        android:text="@string/not_found"
-                        android:textColor="@color/white"
-                        android:textSize="14sp"
-                        android:textStyle="normal" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -155,6 +115,43 @@
 
                     <TextView
                         android:id="@+id/profileEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="70"
+                        android:padding="10dp"
+                        android:text="@string/not_found"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="25"
+                        android:lines="1"
+                        android:padding="10dp"
+                        android:text="@string/name"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/profile_Name"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="70"

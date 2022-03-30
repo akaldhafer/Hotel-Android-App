@@ -43,7 +43,7 @@ public class AdminPanel extends AppCompatActivity {
     }
 
     public void view_customersButton(View view) {
-        Intent intent = new Intent(AdminPanel.this, AdminPanel.class);
+        Intent intent = new Intent(AdminPanel.this, CustomerList.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         finish();

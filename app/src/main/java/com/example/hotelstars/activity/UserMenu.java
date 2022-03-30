@@ -57,7 +57,7 @@ public class UserMenu extends AppCompatActivity {
     }
 
     public void room_serviceButton(View view) {
-        Intent intent = new Intent(UserMenu.this, UserMenu.class);
+        Intent intent = new Intent(UserMenu.this, RoomService.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         finish();
