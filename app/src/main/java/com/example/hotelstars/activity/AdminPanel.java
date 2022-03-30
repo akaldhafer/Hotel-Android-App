@@ -29,14 +29,14 @@ public class AdminPanel extends AppCompatActivity {
     }
 
     public void current_bookingButton(View view) {
-        Intent intent = new Intent(AdminPanel.this, AdminPanel.class);
+        Intent intent = new Intent(AdminPanel.this, ManageCurrentBooking.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         finish();
     }
 
     public void booking_historyButton(View view) {
-        Intent intent = new Intent(AdminPanel.this, AdminPanel.class);
+        Intent intent = new Intent(AdminPanel.this, AllBookingHistory.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         finish();

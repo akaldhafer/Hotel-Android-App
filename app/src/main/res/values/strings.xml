@@ -57,4 +57,7 @@
     <string name="total_payment">Total Payment</string>
     <string name="accept">Accept</string>
     <string name="customer_email">Customer Email:</string>
+    <string name="checkout">Checkout</string>
+    <string name="nights">Nights</string>
+    <string name="checkout_at">Checkout At:</string>
 </resources>

@@ -14,19 +14,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hotelstars.R;
-import com.example.hotelstars.adapter.ApproveBookingAdapter;
-import com.example.hotelstars.adapter.RequestedBookingAdapter;
+import com.example.hotelstars.adapter.AllBookingHistoryAdapter;
+import com.example.hotelstars.adapter.ManageCurrentBookingAdapter;
 import com.example.hotelstars.bookingapi.BookingFetchData;
 import com.example.hotelstars.bookingapi.BookingModel;
 import com.example.hotelstars.bookingapi.BookingViewFetchMessage;
-import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class ApproveBooking extends AppCompatActivity implements BookingViewFetchMessage {
+public class AllBookingHistory extends AppCompatActivity implements BookingViewFetchMessage {
     private RecyclerView ListDataView;
-    private ApproveBookingAdapter Adapter;
+    private AllBookingHistoryAdapter Adapter;
     ImageView menu;
     TextView title;
 
@@ -40,12 +39,12 @@ public class ApproveBooking extends AppCompatActivity implements BookingViewFetc
         title = findViewById(R.id.pageTitle);
 
         menu = findViewById(R.id.onMenu);
-        title.setText("Requested Booking List");
+        title.setText("Booking History List");
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ApproveBooking.this, AdminPanel.class);
+                Intent intent = new Intent(AllBookingHistory.this, AdminPanel.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 finish();
@@ -72,7 +71,7 @@ public class ApproveBooking extends AppCompatActivity implements BookingViewFetc
 //        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 2);
 //        ListDataView.setLayoutManager(mLayoutManager);
 
-        Adapter = new ApproveBookingAdapter(this, roomModelArrayList);
+        Adapter = new AllBookingHistoryAdapter(this, roomModelArrayList);
         ListDataView.setAdapter(Adapter);
         ListDataView.invalidate();
     }
@@ -80,7 +79,7 @@ public class ApproveBooking extends AppCompatActivity implements BookingViewFetc
     @SuppressLint("NotifyDataSetChanged")
     @Override
     public void onUpdateSuccess(BookingModel message) {
-        if(message != null &&message.getStatus().equals("requested")){
+        if(message != null &&message.getStatus().equals("checkedOut")){
             BookingModel roomModel = new BookingModel(message.getId(),message.getCustomerEmail(),
                     message.getRoomID(), message.getRoomTitle(), message.getStartDate(),
                     message.getEndDate(),message.getStatus(),message.getImageUrl(),
@@ -95,7 +94,7 @@ public class ApproveBooking extends AppCompatActivity implements BookingViewFetc
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent intent = new Intent(ApproveBooking.this, AdminPanel.class);
+        Intent intent = new Intent(AllBookingHistory.this, AdminPanel.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         finish();
@@ -103,7 +102,7 @@ public class ApproveBooking extends AppCompatActivity implements BookingViewFetc
 
     @Override
     public void onUpdateFailure(String message) {
-        Toast.makeText(ApproveBooking.this, message, Toast.LENGTH_LONG).show();
+        Toast.makeText(AllBookingHistory.this, message, Toast.LENGTH_LONG).show();
 
     }
 }
