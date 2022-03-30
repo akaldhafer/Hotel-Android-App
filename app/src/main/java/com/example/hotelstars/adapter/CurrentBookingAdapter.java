@@ -51,7 +51,6 @@ public class CurrentBookingAdapter extends RecyclerView.Adapter<CurrentBookingAd
 
         //set view
         holder.edTitle.setText(roomTitle);
-        holder.edStatus.setText("Status: "+status);
         holder.edStartDate.setText(new StringBuilder().append("Start Date: ").append(startDate).toString());
         holder.edNights.setText(new StringBuilder().append("Nights: ").append(String.valueOf(bookingDays)).toString());
         holder.edPrice.setText(new StringBuilder().append("Price: ").append(String.valueOf(price)).append(" RM").toString());
@@ -65,7 +64,7 @@ public class CurrentBookingAdapter extends RecyclerView.Adapter<CurrentBookingAd
         return arrayList.size();
     }
     public class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView edTitle, edPrice, edTotal, edStatus, edStartDate, edNights;
+        private TextView edTitle, edPrice, edTotal, edStartDate, edNights;
         private ImageView imageView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -74,7 +73,6 @@ public class CurrentBookingAdapter extends RecyclerView.Adapter<CurrentBookingAd
             imageView = itemView.findViewById(R.id.ccardImage);
             edNights = itemView.findViewById(R.id.ccardDays);
             edStartDate = itemView.findViewById(R.id.ccardStartDate);
-            edStatus = itemView.findViewById(R.id.ccardStatus);
             edTotal = itemView.findViewById(R.id.ccardTotalPrice);
 
         }

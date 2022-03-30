@@ -5,9 +5,12 @@
       <map>
         <entry key="..\:/Users/ak_al/Desktop/fyp work/Hotel Stars Mobile App/app/src/main/res/drawable/background.xml" value="0.2855" />
         <entry key="..\:/Users/ak_al/Desktop/fyp work/Hotel Stars Mobile App/app/src/main/res/drawable/email.xml" value="0.2855" />
+        <entry key="..\:/Users/ak_al/Desktop/fyp work/Hotel Stars Mobile App/app/src/main/res/drawable/fire.xml" value="0.17" />
         <entry key="..\:/Users/ak_al/Desktop/fyp work/Hotel Stars Mobile App/app/src/main/res/drawable/grey_circular_border.xml" value="0.2855" />
         <entry key="..\:/Users/ak_al/Desktop/fyp work/Hotel Stars Mobile App/app/src/main/res/layout/activity_add_room.xml" value="0.25" />
         <entry key="..\:/Users/ak_al/Desktop/fyp work/Hotel Stars Mobile App/app/src/main/res/layout/activity_admin_panel.xml" value="0.25" />
+        <entry key="..\:/Users/ak_al/Desktop/fyp work/Hotel Stars Mobile App/app/src/main/res/layout/activity_approve_booking.xml" value="0.25" />
+        <entry key="..\:/Users/ak_al/Desktop/fyp work/Hotel Stars Mobile App/app/src/main/res/layout/activity_booking_history.xml" value="0.23386062419837536" />
         <entry key="..\:/Users/ak_al/Desktop/fyp work/Hotel Stars Mobile App/app/src/main/res/layout/activity_current_booking.xml" value="0.24540401881145787" />
         <entry key="..\:/Users/ak_al/Desktop/fyp work/Hotel Stars Mobile App/app/src/main/res/layout/activity_home_page.xml" value="0.25" />
         <entry key="..\:/Users/ak_al/Desktop/fyp work/Hotel Stars Mobile App/app/src/main/res/layout/activity_login_page.xml" value="0.3625" />
@@ -18,6 +21,7 @@
         <entry key="..\:/Users/ak_al/Desktop/fyp work/Hotel Stars Mobile App/app/src/main/res/layout/activity_user_profile.xml" value="0.25" />
         <entry key="..\:/Users/ak_al/Desktop/fyp work/Hotel Stars Mobile App/app/src/main/res/layout/activity_verify_email.xml" value="0.3625" />
         <entry key="..\:/Users/ak_al/Desktop/fyp work/Hotel Stars Mobile App/app/src/main/res/layout/activity_view_all.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/ak_al/Desktop/fyp work/Hotel Stars Mobile App/app/src/main/res/layout/admin_list_view.xml" value="0.23685335613510047" />
         <entry key="..\:/Users/ak_al/Desktop/fyp work/Hotel Stars Mobile App/app/src/main/res/layout/listview_activity.xml" value="0.25" />
         <entry key="..\:/Users/ak_al/Desktop/fyp work/Hotel Stars Mobile App/app/src/main/res/layout/request_room_card.xml" value="0.2039333048311244" />
         <entry key="..\:/Users/ak_al/Desktop/fyp work/Hotel Stars Mobile App/app/src/main/res/layout/room_card.xml" value="0.25" />

@@ -55,4 +55,6 @@
     <string name="enter_nights">Enter Nights</string>
     <string name="status">Status:</string>
     <string name="total_payment">Total Payment</string>
+    <string name="accept">Accept</string>
+    <string name="customer_email">Customer Email:</string>
 </resources>
